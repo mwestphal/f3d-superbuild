@@ -37,10 +37,11 @@ jobs:
 
     - name: Deploy Ubuntu release
       if: matrix.os == 'ubuntu-latest'
-      uses: "marvinpinto/action-automatic-releases@latest"
+      uses: softprops/action-gh-release@v1
       with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "latest"
-        prerelease: true
-        title: "Nightly"
+        repository: f3d-app/f3d
+        token: ${{ secrets.SECRET_TOKEN }}
         files: ./build/CMakeCache.txt
+        prerelease: true
+        tag_name: "nightly"
+        name: "Nightly"
