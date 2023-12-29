@@ -24,6 +24,13 @@ runs:
       path: 'f3d'
       lfs: true
 
+  - name: Check git tags
+    working-directory: ${{github.workspace}}/f3d
+    shell: bash
+    run: |
+      git describe --long
+      git tag
+
   - name: Recover VTK version to build
     working-directory: ${{github.workspace}}
     shell: bash
