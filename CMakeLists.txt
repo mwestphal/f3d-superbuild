@@ -52,6 +52,7 @@ function (superbuild_find_projects var)
     openvkl
     ospray
     ospraymaterials
+    pkgconf
     png
     pybind11
     python3
@@ -59,6 +60,7 @@ function (superbuild_find_projects var)
     sqlite
     szip
     tbb
+    utillinux
     vtk
     xz
     zstd
