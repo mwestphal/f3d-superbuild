@@ -90,7 +90,6 @@ runs:
     shell: bash
     run: >
       cmake ../source
-      -D_superbuild_enable_openssl=ON
       -DBUILD_SHARED_LIBS_alembic=OFF
       -DBUILD_SHARED_LIBS_assimp=OFF
       -DBUILD_SHARED_LIBS_blosc=ON
@@ -125,7 +124,6 @@ runs:
       -DCMAKE_BUILD_TYPE=Release
       -DCMAKE_CXX_COMPILER_LAUNCHER=sccache
       -DCMAKE_C_COMPILER_LAUNCHER=sccache
-      -DENABLE_openssl=ON
       -DENABLE_osmesa=ON
       -DENABLE_ospray=${{ inputs.raytracing_label == 'raytracing' && 'ON' || 'OFF' }}
       -DUSE_SYSTEM_meson=ON
